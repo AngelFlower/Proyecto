@@ -20,7 +20,8 @@ public class PROYECTOF {
         System.out.println("Hi 2");
         System.out.println("cualquier cosa");
         System.out.println("hi 3");
-        System.out.println("Cambioos");
+        System.out.println("Cam");
+        
     }
    
 }
