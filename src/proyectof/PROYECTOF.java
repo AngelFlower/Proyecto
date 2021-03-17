@@ -21,6 +21,8 @@ public class PROYECTOF {
         System.out.println("cualquier cosa");
         System.out.println("hi 3");
         System.out.println("Cambioos");
+        System.out.println("Cambioos");
+        System.out.println("Cambioos");
     }
    
 }
