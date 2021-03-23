@@ -18,7 +18,7 @@ public class Alta {
     }
 
     private void secuenciaSQL(){
-
+        System.out.println("Simulación de SQL");
     }
 
 }
