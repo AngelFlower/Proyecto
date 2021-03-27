@@ -1,6 +1,6 @@
 package modelos;
 
-public class Producto {
+public class Producto extends Pantalla{
 
     private int codigo, inventario;
     private String nombre, descripcion, categoria;
@@ -13,6 +13,31 @@ public class Producto {
         this.descripcion = descripcion;
         this.categoria = categoria;
         this.precio = precio;
+    }
+
+    public Producto() {
+        this.codigo = 0;
+        this.inventario = 0;
+        this.nombre = null;
+        this.descripcion = null;
+        this.categoria = null;
+        this.precio = 0;
+    }
+
+    public void ingresarDatos(){
+        imprimir("Ingrese lo que se le pide\n");
+        imprimirSinSalto("Código: ");
+        setCodigo(leerEntero());
+        imprimirSinSalto("Nombre: ");
+        setNombre(leerString());
+        imprimirSinSalto("Descipción: ");
+        setDescripcion(leerString());
+        imprimirSinSalto("Categoria: ");
+        setCategoria(leerString());
+        imprimirSinSalto("Precio: ");
+        setPrecio(leerDouble());
+        imprimirSinSalto("Invetario: ");
+        setInventario(leerEntero());
     }
 
     public int getCodigo() {

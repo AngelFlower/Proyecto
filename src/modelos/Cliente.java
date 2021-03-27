@@ -13,10 +13,21 @@ public class Cliente extends Persona {
         this.codigo = 0;
     }
 
+    @Override
     public void ingresarDatos(){
         super.ingresarDatos();
         imprimirSinSalto("Código: ");
         setCodigo(leerEntero());
+    }
+
+    public void mostrarDatos(){
+        clearScreen.clear();
+        imprimirLineaH();
+        imprimir("Datos\n");
+        imprimir("Código: " + getCodigo());
+        imprimir("Nombre: " + getNombre());
+        imprimir("Apellidos: " + getApellidos());
+        imprimir("Edad: " + getEdad());
     }
 
     public int getCodigo() {

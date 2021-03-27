@@ -6,12 +6,16 @@ import java.util.Scanner;
 
 public class Pantalla {
 
+    ClearScreen clearScreen = new ClearScreen();
     private static final String padding = "      ";
     public static final String ANSI_GREEN = "\u001B[31m";
     static Scanner entrada = new Scanner(System.in);
 
     public Pantalla() {
-        ClearScreen clearScreen = new ClearScreen();
+        inicioPantalla();
+    }
+
+    public void inicioPantalla(){
         clearScreen.clear();
         imprimirLineaH();
     }
@@ -28,15 +32,33 @@ public class Pantalla {
     }
 
     public static int leerEntero(){
-        return entrada.nextInt();
+        int entero = -1;
+        String valor;
+        do {
+            try {
+                valor = entrada.next();
+                entero = Integer.parseInt(valor);
+            } catch (NumberFormatException ex) {
+                imprimir("Por favor introduce valores enteros");
+            }
+        }while ( entero == -1 );
+        return entero;
     }
 
     public float leerFloat(){
         return entrada.nextFloat();
     }
 
+    public double leerDouble(){
+        return entrada.nextDouble();
+    }
+
     public static String leerString(){
         return entrada.next();
+    }
+
+    public boolean leerBoleano(){
+        return entrada.nextBoolean();
     }
 
     public static String getPadding() {

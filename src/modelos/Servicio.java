@@ -1,10 +1,36 @@
 package modelos;
 
-public class Servicio {
+public class Servicio extends Pantalla{
 
     private int codigo;
     private String nombre, descripcion;
     private boolean disponibilidad;
+
+    public Servicio(int codigo, String nombre, String descripcion, boolean disponibilidad) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.disponibilidad = disponibilidad;
+    }
+
+    public Servicio(){
+        this.codigo = 0;
+        this.nombre = null;
+        this.descripcion = null;
+        this.disponibilidad = false;
+    }
+
+    public void ingresarDatos(){
+        imprimir("Ingrese lo que se le pide\n");
+        imprimirSinSalto("Código: ");
+        setCodigo(leerEntero());
+        imprimirSinSalto("Nombre: ");
+        setNombre(leerString());
+        imprimirSinSalto("Descripción: ");
+        setDescripcion(leerString());
+        imprimirSinSalto("Disponibilidad (true|false): ");
+        setDisponibilidad(leerBoleano());
+    }
 
     public int getCodigo() {
         return codigo;
@@ -38,10 +64,4 @@ public class Servicio {
         this.disponibilidad = disponibilidad;
     }
 
-    public Servicio(int codigo, String nombre, String descripcion, boolean disponibilidad) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.disponibilidad = disponibilidad;
-    }
 }

@@ -18,6 +18,8 @@ public class Persona extends Pantalla{
     }
 
     public void ingresarDatos(){
+        clearScreen.clear();
+        imprimirLineaH();
         imprimir("Ingrese lo que se le pide\n");
         imprimirSinSalto("Nombre: ");
         setNombre(leerString());
