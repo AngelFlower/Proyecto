@@ -3,7 +3,17 @@ package modelos;
 public class Producto {
 
     private int codigo, inventario;
-    private String nombre, descripcion;
+    private String nombre, descripcion, categoria;
+    private double precio;
+
+    public Producto(int codigo, int inventario, String nombre, String descripcion, String categoria, double precio) {
+        this.codigo = codigo;
+        this.inventario = inventario;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.categoria = categoria;
+        this.precio = precio;
+    }
 
     public int getCodigo() {
         return codigo;
@@ -37,6 +47,14 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
     public double getPrecio() {
         return precio;
     }
@@ -44,15 +62,4 @@ public class Producto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-
-    public Producto(int codigo, int inventario, String nombre, String descripcion, double precio) {
-        this.codigo = codigo;
-        this.inventario = inventario;
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.precio = precio;
-    }
-
-    double precio;
-
 }

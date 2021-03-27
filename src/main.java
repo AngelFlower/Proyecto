@@ -1,12 +1,13 @@
-import opciones.Alta;
+import pantallas.Alta;
+import pantallas.Login;
 
 public class main {
 
     public static void main(String[] args) {
 
         Alta alta = new Alta();
-        alta.altaProducto();
 
+        //Login login = new Login();
     }
    
 }
