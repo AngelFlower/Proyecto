@@ -1,17 +1,25 @@
+import java.util.Scanner;
 import pantallas.Alta;
-import pantallas.Menu;
+import pantallas.Consulta;
+import pantallas.Login;
 
 public class main {
 
     public static void main(String[] args) {
-        new main();
+
+       // Alta alta = new Alta();
+
+       // Login login = new Login();
+        
+        
+
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingresa el numero de la categoria");
+        String nombre = entrada.nextLine();
+        Consulta con = new Consulta ();
+        con.getDatos(nombre);
+      
+       
     }
-
-    public main() {
-        new Menu();
-        Alta alta = new Alta();
-
-
-    }
-
+   
 }
