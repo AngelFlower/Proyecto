@@ -11,6 +11,7 @@ public class Pantalla {
     public static final String ANSI_GREEN = "\u001B[31m";
     static Scanner entrada = new Scanner(System.in);
 
+
     public Pantalla() {
         inicioPantalla();
     }
@@ -54,7 +55,8 @@ public class Pantalla {
     }
 
     public static String leerString(){
-        return entrada.next();
+        String s = entrada.nextLine();
+        return( s.length() == 0 ? entrada.nextLine() : s );
     }
 
     public boolean leerBoleano(){

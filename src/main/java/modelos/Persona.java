@@ -3,18 +3,15 @@ package modelos;
 public class Persona extends Pantalla{
 
     private String nombre, apellidos;
-    private int edad;
 
-    public Persona(String nombre, String apellidos, int edad) {
+    public Persona(String nombre, String apellidos) {
         this.nombre = nombre;
         this.apellidos = apellidos;
-        this.edad = edad;
     }
 
     public Persona() {
         this.nombre = null;
         this.apellidos = null;
-        this.edad = 0;
     }
 
     public void ingresarDatos(){
@@ -25,8 +22,6 @@ public class Persona extends Pantalla{
         setNombre(leerString());
         imprimirSinSalto("Apellidos: ");
         setApellidos(leerString());
-        imprimirSinSalto("Edad: ");
-        setEdad(leerEntero());
     }
 
     public String getNombre() {
@@ -45,11 +40,4 @@ public class Persona extends Pantalla{
         this.apellidos = apellidos;
     }
 
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
 }
