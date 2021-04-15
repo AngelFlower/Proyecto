@@ -4,32 +4,39 @@ public class Servicio extends Pantalla{
 
     private int codigo;
     private String nombre, descripcion;
-    private boolean disponibilidad;
+    private double precio;
 
-    public Servicio(int codigo, String nombre, String descripcion, boolean disponibilidad) {
+    public Servicio(int codigo, String nombre, String descripcion, double precio) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.disponibilidad = disponibilidad;
+        this.precio = precio;
     }
 
     public Servicio(){
         this.codigo = 0;
         this.nombre = null;
         this.descripcion = null;
-        this.disponibilidad = false;
+        this.precio = 0;
     }
 
     public void ingresarDatos(){
         imprimir("Ingrese lo que se le pide\n");
-        imprimirSinSalto("Código: ");
-        setCodigo(leerEntero());
         imprimirSinSalto("Nombre: ");
         setNombre(leerString());
         imprimirSinSalto("Descripción: ");
         setDescripcion(leerString());
-        imprimirSinSalto("Disponibilidad (true|false): ");
-        setDisponibilidad(leerBoleano());
+        imprimirSinSalto("Precio: ");
+        setPrecio(leerDouble());
+    }
+
+    public void mostrarDatos(){
+        clearScreen.clear();
+        imprimirLineaH();
+        imprimir("Datos\n");
+        imprimir("Nombre: " + getNombre());
+        imprimir("Descripción: " + getDescripcion());
+        imprimir("Precio: " + getPrecio());
     }
 
     public int getCodigo() {
@@ -56,12 +63,12 @@ public class Servicio extends Pantalla{
         this.descripcion = descripcion;
     }
 
-    public boolean isDisponibilidad() {
-        return disponibilidad;
+    public double getPrecio() {
+        return precio;
     }
 
-    public void setDisponibilidad(boolean disponibilidad) {
-        this.disponibilidad = disponibilidad;
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
 
 }

@@ -13,19 +13,19 @@ public class main {
        // Login login = new Login();
         
         
-/*
+
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingresa el numero de la categoria");
         String nombre = entrada.nextLine();
         Consulta con = new Consulta ();
-        con.getDatos(nombre);*/
+        con.getDatos(nombre);
       
        new main();
     }
 
     public main (){
-        new Menu();
-        new Alta();
+        //new Menu();
+        //new Alta();
     }
    
 }

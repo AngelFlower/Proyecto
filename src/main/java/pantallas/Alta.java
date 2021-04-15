@@ -35,6 +35,8 @@ public class Alta extends Pantalla{
                 break;
             case 2:
                 producto.ingresarDatos();
+                producto.mostrarDatos();
+                altaProducto();
                 break;
             case 3:
                 servicio.ingresarDatos();
@@ -48,13 +50,17 @@ public class Alta extends Pantalla{
     }
 
     public void altaProducto(){
-
+        Menu.getBd().ejecutarSentenciaSQL(
+                "INSERT INTO `producto` (`id_producto`, `nombre`, `descripcion`, `id_categoria`, `precio`) " +
+                        "VALUES (NULL,'" +  producto.getNombre() + "','" + producto.getDescripcion() + "','"
+                        + producto.getCategoria() + "','" + producto.getPrecio() + "')");
     }
     public void altaServicio(){
-        secuenciaSQL();
+        Menu.getBd().ejecutarSentenciaSQL(
+                "INSERT INTO `servicio` (`id_servicio`, `nombre`, `descripcion`, `precio`) " +
+                        "VALUES (NULL,'" +  servicio.getNombre() + "','" + servicio.getDescripcion() + "','" + servicio.getPrecio() + "')");
     }
     public void altaCliente(){
-        System.out.println(cliente.getCorreo());
         Menu.getBd().ejecutarSentenciaSQL(
                 "INSERT INTO `cliente` (`id_cliente`, `correo`, `nombre`, `apellidos`) " +
                         "VALUES (NULL,'" +  cliente.getCorreo()+ "','" + cliente.getNombre()+ "','"
