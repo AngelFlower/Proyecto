@@ -4,15 +4,17 @@ package modelos;
 public class Cliente extends Persona {
 
     private String correo;
+    private int codigo;
 
-
-    public Cliente(String nombre, String apellidos, String correo) {
+    public Cliente(String nombre, String apellidos, String correo, int codigo) {
         super(nombre, apellidos);
         this.correo = correo;
+        this.codigo = codigo;
     }
 
     public Cliente(){
         this.correo = "";
+        this.codigo = 0;
     }
 
     @Override
@@ -37,5 +39,13 @@ public class Cliente extends Persona {
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 }
