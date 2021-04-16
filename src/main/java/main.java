@@ -24,8 +24,9 @@ public class main {
     }
 
     public main (){
-        new Menu();
-        new Alta();
+       new Menu();
+      // new Alta();
+        
     }
    
 }

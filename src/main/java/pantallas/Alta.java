@@ -34,13 +34,13 @@ public class Alta extends Pantalla{
                 altaCliente();
                 break;
             case 2:
-                producto.ingresarDatos();
+             producto.ingresarDatos();
                 break;
             case 3:
-                servicio.ingresarDatos();
+               servicio.ingresarDatos();
                 break;
             case 4:
-                ui();
+               new Menu ();
                 break;
             default:
                 imprimir("Opción inválida");
@@ -59,6 +59,7 @@ public class Alta extends Pantalla{
                 "INSERT INTO `cliente` (`id_cliente`, `correo`, `nombre`, `apellidos`) " +
                         "VALUES (NULL,'" +  cliente.getCorreo()+ "','" + cliente.getNombre()+ "','"
                         + cliente.getApellidos() + "')");
+               
     }
 
     private void secuenciaSQL(){
