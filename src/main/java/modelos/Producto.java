@@ -23,7 +23,7 @@ public class Producto extends Pantalla{
     }
 
     public void ingresarDatos(){
-        imprimir("Ingrese lo que se le pide\n");
+        imprimir("Ingrese los datos\n");
         imprimirSinSalto("Nombre: ");
         setNombre(leerString());
         imprimirSinSalto("Descipción: ");

@@ -13,11 +13,13 @@ public class Alta extends Pantalla{
 
     private void ui(){
         inicioPantalla();
-        imprimir("Escriba el número correspondiente a lo que desea dar de alta\n");
+        imprimir("Altas\n");
         imprimir("1) Cliente");
         imprimir("2) Producto");
         imprimir("3) Servicio");
         imprimir("4) Regresar al menú");
+        imprimir("");
+        imprimir("Ingresa una opción: ");
         imprimirSinSalto("");
         menu(leerEntero());
     }
@@ -40,12 +42,15 @@ public class Alta extends Pantalla{
                 break;
             case 3:
                 servicio.ingresarDatos();
+                servicio.mostrarDatos();
+                altaServicio();
                 break;
             case 4:
                 ui();
                 break;
             default:
                 imprimir("Opción inválida");
+                ui();
         }
     }
 
@@ -65,10 +70,6 @@ public class Alta extends Pantalla{
                 "INSERT INTO `cliente` (`id_cliente`, `correo`, `nombre`, `apellidos`) " +
                         "VALUES (NULL,'" +  cliente.getCorreo()+ "','" + cliente.getNombre()+ "','"
                         + cliente.getApellidos() + "')");
-    }
-
-    private void secuenciaSQL(){
-        System.out.println("Simulación de SQL");
     }
 
 }
