@@ -2,13 +2,12 @@ package modelos;
 
 public class Producto extends Pantalla{
 
-    private int codigo, inventario;
-    private String nombre, descripcion, categoria;
+    private int codigo, categoria;
+    private String nombre, descripcion;
     private double precio;
 
-    public Producto(int codigo, int inventario, String nombre, String descripcion, String categoria, double precio) {
+    public Producto(int codigo, String nombre, String descripcion, int categoria, double precio) {
         this.codigo = codigo;
-        this.inventario = inventario;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.categoria = categoria;
@@ -17,27 +16,32 @@ public class Producto extends Pantalla{
 
     public Producto() {
         this.codigo = 0;
-        this.inventario = 0;
         this.nombre = null;
         this.descripcion = null;
-        this.categoria = null;
+        this.categoria = 0;
         this.precio = 0;
     }
 
     public void ingresarDatos(){
-        imprimir("Ingrese lo que se le pide\n");
-        imprimirSinSalto("Código: ");
-        setCodigo(leerEntero());
+        imprimir("Ingrese los datos\n");
         imprimirSinSalto("Nombre: ");
         setNombre(leerString());
         imprimirSinSalto("Descipción: ");
         setDescripcion(leerString());
         imprimirSinSalto("Categoria: ");
-        setCategoria(leerString());
+        setCategoria(leerEntero());
         imprimirSinSalto("Precio: ");
         setPrecio(leerDouble());
-        imprimirSinSalto("Invetario: ");
-        setInventario(leerEntero());
+    }
+
+    public void mostrarDatos(){
+        clearScreen.clear();
+        imprimirLineaH();
+        imprimir("Datos\n");
+        imprimir("Nombre: " + getNombre());
+        imprimir("Descripción: " + getDescripcion());
+        imprimir("Categoria: " + getCategoria());
+        imprimir("Precio: " + getPrecio());
     }
 
     public int getCodigo() {
@@ -46,14 +50,6 @@ public class Producto extends Pantalla{
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
-    }
-
-    public int getInventario() {
-        return inventario;
-    }
-
-    public void setInventario(int inventario) {
-        this.inventario = inventario;
     }
 
     public String getNombre() {
@@ -72,11 +68,11 @@ public class Producto extends Pantalla{
         this.descripcion = descripcion;
     }
 
-    public String getCategoria() {
+    public int getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(int categoria) {
         this.categoria = categoria;
     }
 

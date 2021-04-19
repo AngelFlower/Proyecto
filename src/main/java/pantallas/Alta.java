@@ -13,11 +13,13 @@ public class Alta extends Pantalla{
 
     private void ui(){
         inicioPantalla();
-        imprimir("Escriba el número correspondiente a lo que desea dar de alta\n");
+        imprimir("Altas\n");
         imprimir("1) Cliente");
         imprimir("2) Producto");
         imprimir("3) Servicio");
         imprimir("4) Regresar al menú");
+        imprimir("");
+        imprimir("Ingresa una opción: ");
         imprimirSinSalto("");
         menu(leerEntero());
     }
@@ -34,27 +36,36 @@ public class Alta extends Pantalla{
                 altaCliente();
                 break;
             case 2:
-             producto.ingresarDatos();
+                producto.ingresarDatos();
+                producto.mostrarDatos();
+                altaProducto();
                 break;
             case 3:
-               servicio.ingresarDatos();
+                servicio.ingresarDatos();
+                servicio.mostrarDatos();
+                altaServicio();
                 break;
             case 4:
                new Menu ();
                 break;
             default:
                 imprimir("Opción inválida");
+                ui();
         }
     }
 
     public void altaProducto(){
-
+        Menu.getBd().ejecutarSentenciaSQL(
+                "INSERT INTO `producto` (`id_producto`, `nombre`, `descripcion`, `id_categoria`, `precio`) " +
+                        "VALUES (NULL,'" +  producto.getNombre() + "','" + producto.getDescripcion() + "','"
+                        + producto.getCategoria() + "','" + producto.getPrecio() + "')");
     }
     public void altaServicio(){
-        secuenciaSQL();
+        Menu.getBd().ejecutarSentenciaSQL(
+                "INSERT INTO `servicio` (`id_servicio`, `nombre`, `descripcion`, `precio`) " +
+                        "VALUES (NULL,'" +  servicio.getNombre() + "','" + servicio.getDescripcion() + "','" + servicio.getPrecio() + "')");
     }
     public void altaCliente(){
-        System.out.println(cliente.getCorreo());
         Menu.getBd().ejecutarSentenciaSQL(
                 "INSERT INTO `cliente` (`id_cliente`, `correo`, `nombre`, `apellidos`) " +
                         "VALUES (NULL,'" +  cliente.getCorreo()+ "','" + cliente.getNombre()+ "','"
@@ -62,8 +73,5 @@ public class Alta extends Pantalla{
                
     }
 
-    private void secuenciaSQL(){
-        System.out.println("Simulación de SQL");
-    }
-
 }
+
