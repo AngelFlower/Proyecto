@@ -35,7 +35,7 @@ public class Menu extends Pantalla{
           new Consulta ();
                 break;
             case 4:
-             //   new Compra();
+              new compra();
                 break;
             case 5: 
                 imprimir ("Usted ha salido Exitosamente del programa");
