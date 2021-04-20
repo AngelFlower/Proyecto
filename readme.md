@@ -4,7 +4,7 @@ _Proyecto final de la materia Programación Orientada a Objetos 2do cuatrimestre
 
 ## Comenzando 🚀
 
-_Estas instrucciones le permitirán obtener una copia del proyecto en funcionamiento en si máquina local para propósitos de desarrollo y pruebas._
+_Estas instrucciones le permitirán obtener una copia del proyecto en funcionamiento en su máquina local para propósitos de desarrollo y pruebas._
 
 Mira **Desplegar** para conocer como desplegar el proyecto.
 
@@ -82,7 +82,7 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+_Aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
 * **Angel Flores** - *Contribuidorl* - [AngelFlower](https://github.com/angelflower)
 * **Fatima Damian** - *Contribuidor* - [MonsDam](https://github.com/monsdam)
