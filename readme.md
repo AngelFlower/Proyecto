@@ -49,27 +49,27 @@ _robles_db_
 
 ### Esquema🔩
 
-[Archivo EXCEL](docs/robles_db.xlsx)
+[Archivo EXCEL](https://github.com/AngelFlower/Proyecto/raw/main/docs/robles_db.xlsx)
 
 _Tabla categoria_
 
-<img src="/docs/categoria.png" alt="Categoria"/>
+<img src="https://github.com/AngelFlower/Proyecto/blob/main/docs/categoria.png?raw=true" alt="Categoria"/>
 
 _Tabla cliente_
 
-<img src="/docs/cliente.png" alt="Cliente"/>
+<img src="https://github.com/AngelFlower/Proyecto/blob/main/docs/cliente.png?raw=true" alt="Cliente"/>
 
 _Tabla producto_
 
-<img src="/docs/producto.png" alt="Producto"/>
+<img src="https://github.com/AngelFlower/Proyecto/blob/main/docs/producto.png?raw=true" alt="Producto"/>
 
 _Tabla servicio_
 
-<img src="/docs/servicio.png" alt="Servicio"/>
+<img src="https://github.com/AngelFlower/Proyecto/blob/main/docs/servicio.png?raw=true" alt="Servicio"/>
 
 ### SQL ⌨️
 
-[Archivo SQL](docs/robles_db.sql)
+[Archivo SQL](https://raw.githubusercontent.com/AngelFlower/Proyecto/main/docs/robles_db.sql)
 
 ## Construido con 🛠️
 
