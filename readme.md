@@ -73,7 +73,7 @@ _Tabla servicio_
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+_Herramientas que utilizadas para crear el proyecto_
 
 * [IntelliJ IDEA CE](https://www.jetbrains.com/es-es/idea/) - IDE usado
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
@@ -84,7 +84,7 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 _Aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* **Angel Flores** - *Contribuidorl* - [AngelFlower](https://github.com/angelflower)
+* **Angel Flores** - *Contribuidor* - [AngelFlower](https://github.com/angelflower)
 * **Fatima Damian** - *Contribuidor* - [MonsDam](https://github.com/monsdam)
 * **Francisco Gerardo** - *Contribuidor* - [franckkgp](https://github.com/franckkgp)
 * **Iván Villaloz** - *Contribuidor* - [ThanaKroZ](https://github.com/thanakroz)
