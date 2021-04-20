@@ -16,16 +16,17 @@ public class Consulta extends Pantalla {
     private ResultSet rs;
 
     public Consulta(){
-      Consulta20();
         try{
 
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con =(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/robles_db", "root","");
             st =(Statement) con.createStatement();
 
         }catch(Exception ex){
             ex.printStackTrace();
         }
+      Consulta20();
+
     }
     //CATEGORIA
     public void getDatosCategoria(String nombreIngresado){
@@ -112,22 +113,22 @@ public class Consulta extends Pantalla {
         Scanner entrada = new Scanner(System.in);
         imprimir("Ingresa el numero de la categoria");
         String nombre = entrada.nextLine();
-        Consulta con = new Consulta ();
-        con.getDatosCategoria(nombre);
+        //Consulta con = new Consulta ();
+        getDatosCategoria(nombre);
 //CLIENTE
    imprimir("Ingresa el numero del cliente");
          String nombre1 = entrada.nextLine();
-         con.getDatosCliente(nombre1);
+         getDatosCliente(nombre1);
 
 //PRODUCTO
   imprimir("Ingresa el numero del producto");
          String nombre2 = entrada.nextLine();
-         con.getDatosProducto(nombre2);
+         getDatosProducto(nombre2);
     
 //SERVICIO
   imprimir("Ingresa el numero del servicio");
          String nombre3 = entrada.nextLine();
-         con.getDatosServicio(nombre3);
+         getDatosServicio(nombre3);
         
     }
     
